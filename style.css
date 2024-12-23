@@ -210,37 +210,42 @@ nav {
 }
 
 .products {
-  height: 100vh;
   background-color: whitesmoke;
   position: relative;
-  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+  padding: 50px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
 .productImg {
-  width: 45%;
+  width: 100%; 
+  max-width: 400px; 
+  height: auto; 
 }
 
 .productInfo {
-  position: absolute;
-  top: 10%;
-  right: 0;
-  width: 40%;
-  padding: 50px;
+  width: 100%;
+  max-width: 400px; 
+  padding: 20px; 
+  text-align: center;
+  background-color: whitesmoke;
 }
 
 .productName {
-  font-size: 75px;
+  font-size: 30px; 
   font-weight: 900;
 }
 
 .productDescription {
-  font-size: 18px;
+  font-size: 14px;
   color: gray;
 }
 
 .colors,
 .sizes {
   display: flex;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
@@ -274,6 +279,7 @@ nav {
   color: black;
   cursor: pointer;
   transition: all ease-in-out 300ms;
+  margin-top: 20px;
 }
 
 .productBtn:hover {
@@ -282,19 +288,21 @@ nav {
 }
 
 .payment {
-  width: 600px;
-  height: 500px;
+  width: 90%;
+  max-width: 400px;
   background-color: white;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
   margin: auto;
-  padding: 10px 40px;
+  padding: 20px;
   display: none;
   flex-direction: column;
   box-shadow: -3px 6px 14px 2px rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+  overflow-y: auto; 
+  max-height: 80vh;
   -webkit-box-shadow: -3px 6px 14px 2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -3px 6px 14px 2px rgba(0, 0, 0, 0.75);
 }
@@ -304,11 +312,13 @@ nav {
   font-style: italic;
   font-size: 20px;
   color: #0000ff;
+  margin-bottom: 20px;
 }
 
 label {
   font-size: 14px;
   font-weight: 300;
+  margin-top: 10px;
 }
 
 .payInput {
@@ -317,10 +327,13 @@ label {
   border: none;
   outline: none;
   border-bottom: 1px solid black;
+  width: 100%; 
 }
 
 .cardIcons {
   display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .cardIcon {
@@ -337,8 +350,8 @@ label {
 }
 
 .close {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   background-color: black;
   color: white;
@@ -347,15 +360,13 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px 18px;
+  padding: 5px;
   cursor: pointer;
   border-radius: 7px;
 }
 
 .payBtn {
-  position: absolute;
   height: 40px;
-  bottom: -40px;
   width: 100%;
   left: 0;
   box-shadow: -3px 6px 14px 2px rgba(0, 0, 0, 0.75);
@@ -366,6 +377,7 @@ label {
   border: none;
   font-size: 18px;
   font-weight: bold;
+  margin-top: 20px;
 }
 
 footer {
@@ -611,3 +623,4 @@ footer {
     padding: 20px;
   }
 }
+
