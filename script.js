@@ -132,6 +132,10 @@ const closeBtn = document.querySelector(".close");
 
 productBtnEl.addEventListener("click", () => {
   paymentEl.style.display = "flex";
+  paymentEl.style.position = "fixed"; 
+  paymentEl.style.top = "50%"; 
+  paymentEl.style.left = "50%"; 
+  paymentEl.style.transform = "translate(-50%, -50%)";
 });
 
 closeBtn.addEventListener("click", () => {
